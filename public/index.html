@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <main class="search-container">
-        <form id="search-form">
+    <header class="header">
+        <form id="search-form" class="search-form">
             <input
                 type="text"
                 id="search-input"
@@ -21,6 +21,35 @@
 
             <button type="submit">Rechercher</button>
         </form>
+
+        <div class="search-modes" role="group" aria-label="Mode de recherche">
+            <button type="button" class="mode-btn active"
+                data-mode="standard" aria-pressed="true">
+                Standard
+            </button>
+
+            <button type="button" class="mode-btn"
+                data-mode="exact" aria-pressed="false">
+                Exact
+            </button>
+
+            <button type="button" class="mode-btn"
+                data-mode="manual" aria-pressed="false">
+                Manuel
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <div id="search-info" class="search-info" hidden>
+            <p id="result-count"></p>
+        </div>
+
+        <section id="results-container" class="results-container">
+            <!-- Les résultats seront ajoutés ici -->
+        </section>
+
     </main>
 
     <script src="./script.js"></script>
