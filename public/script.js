@@ -1,30 +1,15 @@
-const paragraphe = document.getElementById("p");
-const btn_test = document.getElementById("btn_test");
-const btn_health = document.getElementById("btn_health");
 
-btn_test.addEventListener('click' , async () => {
-    const pendingTest = await fetch("/test", {
-        method: "GET", 
-        headers: {
-            content: "application/json"
-        }
-    })
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
 
-    const test = await pendingTest.json();
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    console.log(test);
-})
+    const query = searchInput.value.trim();
 
+    if (!query) {
+        return;
+    }
 
-btn_health.addEventListener('click', async (e) => {
-    const pendingHealthy = await fetch("/health", {
-        method: "GET", 
-        headers: {
-            content: "application/json"
-        }
-    })
-
-    const healthy = await pendingHealthy.json();
-
-    console.log(healthy);
-})
+    console.log("Recherche :", query);
+});

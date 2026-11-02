@@ -1,15 +1,28 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Real Search</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <p id="p">OK OK</p>
-    <button id="btn_test">test</button>
-    <button id="btn_health">health</button>
+
+    <main class="search-container">
+        <form id="search-form">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Rechercher..."
+                autocomplete="off"
+                autofocus
+            >
+
+            <button type="submit">Rechercher</button>
+        </form>
+    </main>
+
     <script src="./script.js"></script>
 </body>
 </html>
